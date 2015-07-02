@@ -1,0 +1,246 @@
+@font-face{
+	font-family: 'futura_bdcn_btbold';
+	src: url('../fonts/futura-bdcn-bt-bold-webfont.eot');
+	src: url('../fonts/futura-bdcn-bt-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/futura-bdcn-bt-bold-webfont.woff2') format('woff2'),
+		url('../fonts/futura-bdcn-bt-bold-webfont.woff') format('woff'),
+		url('../fonts/futura-bdcn-bt-bold-webfont.ttf') format('truetype'),
+		url('../fonts/futura-bdcn-bt-bold-webfont.svg#futura_bdcn_btbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'helveticabold';
+	src: url('../fonts/helvetica-bold-webfont.eot');
+	src: url('../fonts/helvetica-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica-bold-webfont.woff2') format('woff2'),
+		url('../fonts/helvetica-bold-webfont.woff') format('woff'),
+		url('../fonts/helvetica-bold-webfont.ttf') format('truetype'),
+		url('../fonts/helvetica-bold-webfont.svg#helveticabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'helveticaregular';
+	src: url('../fonts/helvetica-webfont.eot');
+	src: url('../fonts/helvetica-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica-webfont.woff2') format('woff2'),
+		url('../fonts/helvetica-webfont.woff') format('woff'),
+		url('../fonts/helvetica-webfont.ttf') format('truetype'),
+		url('../fonts/helvetica-webfont.svg#helveticaregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: helveticabold;	
+}
+
+div{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+select, option{
+	width: 100px;
+	height: 20px;
+}
+
+select{
+	margin-top: 4px;
+	border: 1px solid #aaa;
+	border-radius: 0;
+}
+
+option{
+	width: 100%;
+	font-size: 16px;
+	font-family: helveticaregular;
+	text-align: left;
+	padding: 2px;	
+}
+
+h1{
+	float: left;
+	font-size: 97px;
+	margin: 0;
+	font-variant: small-caps;
+	text-transform: uppercase;
+	text-shadow: 4px 4px 0 orange;
+	color: yellow;
+	font-family: futura_bdcn_btbold;
+	letter-spacing: 3px;	
+}
+
+.colorBlock{
+	display: block;
+	margin: 0;
+	padding: 5px;
+	float: left;
+	background-color: yellow;
+	border: none;
+	height: 36px;
+	width: 205px;
+	box-shadow: 4px 4px 0 0 orange;
+	line-height: 36px;
+	text-decoration: none;
+	color: black;
+	font-family: helveticabold;
+	letter-spacing: -0.5px;	
+	font-size: 20px;
+	text-align: center;	
+}
+
+	.colorBlock + .colorBlock{
+		margin-left: 20px;
+	}
+
+#foreground{
+	width: 145px;
+}
+
+#pattern{
+	width: 139px;
+}
+
+a.colorBlock, button.colorBlock{
+	padding: 0;
+}
+
+a.colorBlock{
+	margin-top: 43px;
+	float: right;
+	padding: 0 8px;
+	width: 215px;
+}
+
+.right{
+	float: right;
+}
+
+.pause{
+	width: 70px;
+}
+
+.pause.play{
+}
+
+.pause.stop{
+
+}
+
+.cell{
+	width: 26px;
+	height: 26px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	float: left;
+	cursor: pointer;
+	transition: background-color 700ms linear;
+}
+
+	.cell.outline{
+		outline: 1px solid white;
+	}
+
+.grid{
+	position: relative;
+	margin: 1px auto 25px auto;
+}
+
+.selection{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 134px;
+	height: 269px;
+	border: 1px solid yellow;
+	z-index: -1;
+}
+
+.handle{
+	position: absolute;
+	top: -11px;
+	left: -11px;
+	width: 21px;
+	height: 21px;
+	background-color: yellow;
+	cursor: move;
+	background-image: url(../images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.largeHandle{
+	display: none;
+	position: relative;
+	top: -11px;
+	left: -11px;
+	width: 41px;
+	height: 41px;
+	background-color: yellow;
+	border-radius: 10px;
+	background-image: url(../images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+	.handle.active .largeHandle{
+		display: block;
+	}
+
+.state1{ background-color: #F80000 !important; }
+.state2{ background-color: #FF4500 !important; }
+.state3{ background-color: #00FF00 !important; }
+.state4{ background-color: #9ACD32 !important; }
+.state5{ background-color: #FFFF00 !important; }
+.state6{ background-color: #FF00FF !important; }
+.state7{ background-color: #66FFFF !important; }
+.state8{ background-color: #3300FF !important; }
+.state9{ background-color: #0000FF !important; }
+.state10{ background-color: #FFFFCC !important; }
+.state11{ background-color: #660099 !important; }
+.state12{ background-color: #FFC0CB !important; }
+.state13{ background-color: #222222 !important; }
+
+.control{
+	padding-bottom: 20px;
+	text-align: center;
+	width: 850px;
+	margin: 0 auto;
+	transition: background-color 700ms linear;
+}
+
+.clearGrid{
+	display: none;
+	width: 90px;
+}
+
+.clear{
+	clear: both;
+}
+
+.author{
+	text-align: center;
+	padding: 5px;
+	margin: 0 auto;
+	font-family: verdana, tahoma, sans-serif;
+	letter-spacing: -0.6px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}

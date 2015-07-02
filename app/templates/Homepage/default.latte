@@ -1,0 +1,15 @@
+{block grid}
+<div class="grid" style="width:{$config['cells_x'] * 27}px;">
+	{dump $config}
+	{for $i = 0; $i < $config['cells_x']; $i ++}
+		{for $j = 0; $j < $config['cells_y']; $j ++}
+			<div class="cell" number="{$i * $config['cells_y'] + $j}" state="" style="background-color: #{$config['background']}"></div>
+		{/for}
+	{/for}
+	<div class="handle">
+		<div class="largeHandle"></div>
+		<div class="selection"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+{/block}
